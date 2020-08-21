@@ -1,6 +1,5 @@
-import os,sys
+import os, sys
 
-print(sys.argv[1])
 tar_dir = sys.argv[1]
 print('tar_dir is ' + tar_dir)
 all_names = os.listdir(tar_dir)
@@ -18,12 +17,11 @@ while len(all_names) > 0:
 	if cur_flag != flag :
 		flag = cur_flag
 		count += 1
-		print("change flag to " +"flag")
-		view_path = tar_dir + 'view'+str(count)+'/'	
+		print("change flag to ", flag)
+		view_path = tar_dir + 'view' + str(count) + '/'	
 		if not os.path.exists(view_path):
 			os.makedirs(view_path)
-	
-	os.rename(tar_dir+cur_img,view_path+cur_img)
 
+	os.rename(tar_dir+cur_img,view_path+cur_img)
 	all_names.pop(0)
 

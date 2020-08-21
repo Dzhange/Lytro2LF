@@ -25,8 +25,7 @@ for item in item_names:
 			continue
 		all_images = os.listdir(path+ item+'/'+view)
 		all_images.sort()
-		count = 0;
-
+		count = 0
 		path_a = path+item+'/'+view+'/'	
 
 		print("current path is "+ path_a)
@@ -34,8 +33,7 @@ for item in item_names:
 			image = all_images[0] 
 			print("image is " + image+"count is "+str(count))
 			if image[0] == '.':
-				continue
-			
+				continue			
 			else:
 				count += 1
 				col = count % number
@@ -51,7 +49,3 @@ for item in item_names:
 				os.rename(path_a+image,path_a+col+"_"+row+".png")
 				print("new name is "+path_a+col+"_"+row+".png")
 			all_images.pop(0)
-
-		
-
-# os.rename("test","test2")

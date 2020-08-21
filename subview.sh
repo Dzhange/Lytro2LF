@@ -1,10 +1,6 @@
 #！/bin/bash
 
-
-
-
 for row in $(seq 1 $4);
-
 do 
 	for col in $(seq 1 $4);
 	do 
